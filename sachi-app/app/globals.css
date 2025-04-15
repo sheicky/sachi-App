@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #8a2be2;
+  --secondary: #ff69b4;
+  --background: #0a0a0a;
+  --text: #ffffff;
+  --accent: #ff4081;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+}
+
+.nav-link {
+  color: #9ca3af;
+  transition-property: color;
+  transition-duration: 200ms;
+}
+.nav-link:hover {
+  color: #9f7aea;
+}
+
+.btn-primary {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-image: linear-gradient(to right, #8b5cf6, #ec4899);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  transition-property: all;
+  transition-duration: 200ms;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.card {
+  background-color: rgba(17, 24, 39, 0.5);
+  backdrop-filter: blur(16px);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border-width: 1px;
+  border-color: #1f2937;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
